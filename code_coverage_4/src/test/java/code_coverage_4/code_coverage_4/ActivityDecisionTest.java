@@ -63,5 +63,33 @@ public class ActivityDecisionTest {
 
             assertEquals(expected, result);
         }
+        @Test
+        public void Walking_1_Midnight_0_Raining_0_Sunshine_0_Running_0() {
+            ActivityDecision activityDecision = new ActivityDecision();
+            activityDecision.Walking = true;
+            activityDecision.Midnight = false;
+            activityDecision.Raining = false;
+            activityDecision.Sunshine = false;
+            activityDecision.Running = false;
+
+            String result = activityDecision.decideActivity();
+            String expected = "Keep doing what you were doing";
+
+            assertEquals(expected, result);
+        }
+        @Test
+        public void Walking_0_Midnight_0_Raining_0_Sunshine_1_Running_0() {
+            ActivityDecision activityDecision = new ActivityDecision();
+            activityDecision.Walking = false;
+            activityDecision.Midnight = false;
+            activityDecision.Raining = false;
+            activityDecision.Sunshine = true;
+            activityDecision.Running = false;
+
+            String result = activityDecision.decideActivity();
+            String expected = "Keep doing what you were doing";
+
+            assertEquals(expected, result);
+        }
 
 }
