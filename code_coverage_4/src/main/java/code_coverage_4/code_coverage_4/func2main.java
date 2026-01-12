@@ -1,6 +1,6 @@
 package code_coverage_4.code_coverage_4;
 
-public class func2_class {
+public class func2main {
     public static String func2 (float p, float q) {
 
         if (p != 0) {
